@@ -7,7 +7,11 @@ const fs = require('fs');
 const path = require('path');
 
 const app=express();
-app.use(cors());
+
+var corsOptions = {
+  origin: "https://ragrecommendationsystemfrontend-sairamnsts-projects.vercel.app/"
+};
+app.use(cors(corsOptions));
 
 // app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
