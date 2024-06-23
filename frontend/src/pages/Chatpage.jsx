@@ -18,7 +18,7 @@ const Chatpage = () => {
     // let hiddenquery=query+"use the pipelined csv database to suggest a product with a pid for the given query...also search the description and formatted specification along with the title to find the pid";
     //'Suggest title of '+query+' using the given data.\ Follow this approach 1:Find titles with the term '+query+' and 2:suggest in order of increasing price.'
     try {
-      const response = await fetch('http://localhost:8081/api/query', {
+      const response = await fetch('https://ragrecommendationsystembackend-sairamnsts-projects.vercel.app/api/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
