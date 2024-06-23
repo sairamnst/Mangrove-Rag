@@ -59,7 +59,7 @@ app.post('/api/query', async (req, res) => {
     
     try {
         // Execute Python script
-        const result = await executePython('python/ragllm.py', query);
+        const result = await executePython('../python/ragllm.py', query);
         // Send the result as response
         res.json({ result });
     } catch (error) {
