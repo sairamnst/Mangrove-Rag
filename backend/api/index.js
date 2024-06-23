@@ -13,6 +13,11 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 
+app.use((req, res, next) => {
+  res.header({"Access-Control-Allow-Origin": "*"});
+  next();
+}) 
+
 // app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
