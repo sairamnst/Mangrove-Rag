@@ -19,6 +19,7 @@ const Chatpage = () => {
     //'Suggest title of '+query+' using the given data.\ Follow this approach 1:Find titles with the term '+query+' and 2:suggest in order of increasing price.'
     try {
       const response = await fetch('https://ragrecommendationsystembackend-sairamnsts-projects.vercel.app/api/query', {
+        mode: 'no-cors',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
